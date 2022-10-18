@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/363b317c51.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;800&display=swap" rel="stylesheet"> 
+  </head>
+  <body>
+    <div id="particles-js">
+      <div class="content">
+        <div class="wallpaper">
+          <h1 id="time"></h1>
+          <img src="assets/vghgtg4t5ur51.jpg" alt="">
+        </div>
+        <div class="search-bar">
+          <a href=""><i class="fas fa-search" style="position=absolute"></i></a>
+          <input type="" id="input" autofocus>
+        </div>
+        <div class="web-folders">
+          <div class="folder">
+            <ul>
+              <h2>~/General</h2>
+              <li><a href="https://www.youtube.com/">Youtube</a></li>
+              <li><a href="https://www.reddit.com/">Reddit</a></li>
+              <li><a href="https://www.github.com/">github</a></li>
+              <li><a href="https://web.whatsapp.com/">zapzap</a></li>
+            </ul>
+          </div>
+          <div class="folder">
+            <ul>
+              <h2>~/Work</h2>
+              <li><a href="https://mail.google.com/">Mail</a></li>
+              <li><a href="https://kleki.com/">Kleki</a></li>
+              <li><a href="https://www.figma.com">Figma</a></li>
+            </ul>
+          </div>
+          <div class="folder">
+            <ul>
+              <h2>~/College</h2>
+              <li><a href="https://classroom.google.com/">Classroom</a></li>
+              <li><a href="https://ead.cead.uff.br/">Cead</a></li>
+              <li><a href="https://www.notion.so">Notion</a></li>
+              <li><a href="https://pt.z-lib.org/">Z-lib</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let date = new Date();
+    console.log(date);
+    let time = document.getElementById('time');
+    time.innerHTML = `${date.getHours()}:${date.getMinutes()}`
+
+    var input = document.getElementById("input");
+
+    // Execute a function when the user presses a key on the keyboard
+    input.addEventListener("keypress", function(event) {
+      // If the user presses the "Enter" key on the keyboard
+      if (event.key === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        //document.getElementById("searchBtn").click();
+        console.log(input.value);
+        window.location.replace(`https://www.google.com/search?q=${input.value}&source=hp&ei=HrpNY9vcErvR1sQPhLqYkAo&iflsig=AJiK0e8AAAAAY03ILojQ2qJ-UDBfNck7JkXOm7fLaUfJ&ved=0ahUKEwjb48OpjOj6AhW7qJUCHQQdBqIQ4dUDCAc&uact=5&oq=teste&gs_lcp=Cgdnd3Mtd2l6EAMyCwgAEIAEELEDEIMBMgUIABCABDILCAAQgAQQsQMQgwEyCAgAEIAEELEDMggIABCABBCxAzILCAAQgAQQsQMQgwEyBQgAEIAEMggIABCABBCxAzIICAAQgAQQsQMyCAgAEIAEELEDOhQILhCABBCxAxCDARDHARDRAxDUAjoICC4QsQMQgwE6EQguEIAEELEDEIMBEMcBENEDOggIABCxAxCDAVAAWMYDYMsEaABwAHgAgAGMAYgBxwSSAQMwLjWYAQCgAQE&sclient=gws-wiz`);
+      }
+    });
+  </script>
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
+</html>
